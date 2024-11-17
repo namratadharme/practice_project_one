@@ -29,6 +29,15 @@
   color: red;
   align-self: center;
 }
+.nameField {
+  display: flex;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 19px;
+  width: 50%;
+  gap: 8px;
+  flex-direction: row;
+  margin-left: 30px;
+}
 
 .button:enabled {
   border-radius: 7px;

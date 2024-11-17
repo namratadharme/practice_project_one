@@ -3,11 +3,15 @@ import { useState, useEffect } from "react";
 import "../Style/registration.css";
 import { userRegistration } from "../Services/User.services";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Registration() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmpassword, setConfirmpassword] = useState("");
+  const [gender, setGender] = useState("male");
   const [enable, setEnable] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -22,15 +26,34 @@ function Registration() {
   function handleinput3(e) {
     setConfirmpassword(e.target.value);
   }
+
+  function handleFirstName(e) {
+    setFirstName(e.target.value);
+  }
+  function handleLastName(e) {
+    setLastName(e.target.value);
+  }
+  function handleselect_gender(e) {
+    setGender(e.target.value);
+  }
   async function handleSignup() {
     if (validation()) {
       try {
         setLoading(true);
-        const reg = await userRegistration(email, password, confirmpassword);
+        const reg = await userRegistration(
+          email,
+          password,
+          confirmpassword,
+          firstName,
+          lastName,
+          gender
+        );
         console.log("Registration successful", reg);
+        toast.success(reg.message);
         navigate("/login");
       } catch (error) {
-        console.log(error);
+        console.log(error.response.data.message);
+        toast.error(error.response.data.message);
       } finally {
         setLoading(false);
       }
@@ -70,6 +93,23 @@ function Registration() {
   return (
     <>
       <div id="container">
+        <span className="type">Name</span>
+        <div className="nameField">
+          <input
+            className="input1"
+            type="text"
+            placeholder="FirstName"
+            onChange={handleFirstName}
+          ></input>
+
+          <input
+            className="input1"
+            type="text"
+            placeholder="LastName"
+            onChange={handleLastName}
+          ></input>
+        </div>
+
         <span className="type">Email</span>
         <input
           type="text"
@@ -79,18 +119,28 @@ function Registration() {
         ></input>
         <span className="type">Password</span>
         <input
-          type="text"
+          type="password"
           className="inputField"
           placeholder="Password"
           onChange={handleInput2}
         ></input>
         <span className="type">Confirm Password</span>
         <input
-          type="text"
+          type="password"
           className="inputField"
           placeholder="Confirm Password"
           onChange={handleinput3}
         ></input>
+        <span className="type">Gender</span>
+        <select
+          id="gender"
+          name="gender"
+          value={gender}
+          onChange={handleselect_gender}
+        >
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
         <p className="para">{error ? error : ""}</p>
         <button className="button" onClick={handleSignup} disabled={!enable}>
           {loading ? "Loading..." : "Sign up"}

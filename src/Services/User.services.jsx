@@ -1,27 +1,43 @@
 import axios from "axios";
-import { loginEndpoint, registrationEndpoint } from "../urlnew";
+import {
+  loginEndpoint,
+  registrationEndpoint,
+  fetchuserDataEndpoint,
+} from "../urlnew";
 
 async function userLogin(email, password) {
   return new Promise((resolve, reject) => {
     axios
       .post(loginEndpoint, { email, password })
       .then((response) => {
-        const token = response.data.token;
-        console.log(token);
-        localStorage.setItem("token", token);
-        resolve(response.data.token);
+        console.log(response);
+        resolve(response);
       })
-      .catch((error) => {
-        console.log(error);
-        reject(error);
+      .catch((response) => {
+        console.log(response);
+        reject(response);
       });
   });
 }
 
-async function userRegistration(email, password, confirmpassword) {
+async function userRegistration(
+  email,
+  password,
+  confirmpassword,
+  fname,
+  lname,
+  gender
+) {
   return new Promise((resolve, reject) => {
     axios
-      .post(registrationEndpoint, { email, password, confirmpassword })
+      .post(registrationEndpoint, {
+        email,
+        password,
+        confirmpassword,
+        fname,
+        lname,
+        gender,
+      })
       .then((response) => {
         console.log("Registration successful", response.data);
         resolve(response.data);
@@ -32,5 +48,19 @@ async function userRegistration(email, password, confirmpassword) {
       });
   });
 }
+async function fetchData() {
+  return new Promise((resolve, reject) => {
+    axios
+      .get(fetchuserDataEndpoint)
+      .then((response) => {
+        console.log(response);
+        resolve(response);
+      })
+      .catch((error) => {
+        console.log(error);
+        reject(error);
+      });
+  });
+}
 
-export { userLogin, userRegistration };
+export { userLogin, userRegistration, fetchData };

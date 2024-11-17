@@ -4,7 +4,10 @@ import Loginpage from "./M_pages/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Registration from "./M_pages/Registration";
 import Homepage from "./M_pages/Home";
+import Header from "./component/header";
 import ProtectedRouter from "./ProtectedRouter";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const router = createBrowserRouter([
   {
@@ -27,11 +30,16 @@ const router = createBrowserRouter([
     path: "/registration",
     element: <Registration />,
   },
+  {
+    path: "/header",
+    element: <Header />,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <ToastContainer />
     <RouterProvider router={router}></RouterProvider>
   </React.StrictMode>
 );

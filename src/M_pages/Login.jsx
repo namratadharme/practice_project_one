@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../Style/login.css";
-import { userLogin } from "../Services/User.services";
+import { fetchData, userLogin } from "../Services/User.services";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Loginpage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("namm@gmail.com");
+  const [password, setPassword] = useState("nammo123456");
   const [enable, setEnable] = useState(false);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -22,10 +23,12 @@ function Loginpage() {
       try {
         setLoading(true);
         const reg = await userLogin(email, password);
-        console.log(reg);
+        toast.success(reg.data.message);
+        localStorage.setItem("authToken", reg.data.token);
         navigate("/home");
       } catch (error) {
         console.log(error);
+        toast.error(error.response.data.message);
       } finally {
         setLoading(false);
       }

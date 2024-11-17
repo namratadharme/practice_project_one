@@ -1,0 +1,30 @@
+.header-container {
+  background-color: red;
+  min-height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+}
+
+.logo {
+  flex: 1;
+}
+
+.nav-bar {
+  flex: 9;
+  background-color: aqua;
+}
+
+.search-bar {
+  flex: 4;
+  background-color: antiquewhite;
+}
+
+.user-card-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
