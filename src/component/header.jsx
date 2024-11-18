@@ -1,6 +1,6 @@
 import React from "react";
 import "../Style/header.css";
-import Usercard from "./Usercard";
+import UserCard from "./UserCard";
 
 function Header(props) {
   return (
@@ -10,7 +10,7 @@ function Header(props) {
         <div className="nav-bar"></div>
         <div className="search-bar"></div>
         <div className="userCardContainer">
-          {props.user ? <Usercard user={props.user} /> : <></>}
+          {props.user ? <UserCard user={props.user} /> : <></>}
         </div>
       </div>
     </>
