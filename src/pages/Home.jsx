@@ -46,10 +46,13 @@ function Homepage() {
       <button
         onClick={handleLogout}
         style={{
-          backgroundColor: "darkblue",
+          backgroundColor: "lightblue",
+          color: "white",
           borderRadius: "5px",
           padding: "9px 22px",
           margin: "300px",
+          cursor: "pointer",
+          border: "none",
         }}
       >
         Log out

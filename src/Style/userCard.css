@@ -3,10 +3,11 @@
   height: 50px;
   width: 50px;
   background-image: url("../../public/profile.jpg");
+  background-color: yellow;
   align-self: center;
   background-size: 100px;
   background-repeat: no-repeat;
-  background-color: beige;
+
   border-radius: 5px;
   cursor: pointer;
 }

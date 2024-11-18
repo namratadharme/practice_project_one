@@ -6,9 +6,9 @@ function Header(props) {
   return (
     <>
       <div id="headerContainer">
-        <div className="logo">logo</div>
-        <div className="nav-bar">nav-bar</div>
-        <div className="search-bar">serach-bar</div>
+        <div className="logo"></div>
+        <div className="nav-bar"></div>
+        <div className="search-bar"></div>
         <div className="userCardContainer">
           {props.user ? <Usercard user={props.user} /> : <></>}
         </div>

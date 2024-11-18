@@ -4,7 +4,7 @@ body {
 }
 #headerContainer {
   display: flex;
-  /* background-color: brown; */
+  background-color: lightblue;
   width: 100%;
   min-height: 80px;
   position: fixed;
@@ -12,19 +12,17 @@ body {
 }
 .logo {
   flex: 1;
-  background-color: aliceblue;
 }
 .nav-bar {
   flex: 4;
-  background-color: aqua;
 }
 .search-bar {
   flex: 2;
-  background-color: aquamarine;
 }
 .userCardContainer {
   display: flex;
   flex: 1;
   align-content: center;
   justify-content: center;
+  background-color: lightgray;
 }
