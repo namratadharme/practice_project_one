@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../Style/login.css";
-import { fetchData, userLogin } from "../Services/User.services";
+import { userLogin } from "../Services/User.services";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 

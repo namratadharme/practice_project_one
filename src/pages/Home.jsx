@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { fetchData } from "../Services/User.services";
-import Header from "../component/header";
+import Header from "../component/Header";
 
 function Homepage() {
   const navigate = useNavigate();
-  const [user, setUser] = useState(undefined);
+  const [user, setUser] = useState();
 
   function handleLogout() {
     localStorage.removeItem("token");
@@ -24,12 +24,11 @@ function Homepage() {
   }, []);
 
   useEffect(() => {
-    console.log("User Data state changed", user);
+    console.log("user state change", user);
   }, [user]);
-
   return (
     <>
-      <h1
+      {/* <h1
         style={{
           backgroundColor: "blue",
           textAlign: "center",
@@ -38,21 +37,19 @@ function Homepage() {
         }}
       >
         Welcome to Homepage
-      </h1>
-      <p style={{ textAlign: "center", fontSize: "20px" }}>
+      </h1> */}
+      {/* <p style={{ textAlign: "center", fontSize: "20px" }}>
         you have already logged in
-      </p>
+      </p> */}
       <Header user={user} />
-
       <br></br>
       <button
         onClick={handleLogout}
         style={{
-          backgroundColor: "lightblue",
+          backgroundColor: "darkblue",
           borderRadius: "5px",
           padding: "9px 22px",
-          display: "block",
-          margin: "auto",
+          margin: "300px",
         }}
       >
         Log out

@@ -1,0 +1,20 @@
+.userCard {
+  display: flex;
+  height: 50px;
+  width: 50px;
+  background-image: url("../../public/profile.jpg");
+  align-self: center;
+  background-size: 100px;
+  background-repeat: no-repeat;
+  background-color: beige;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.userCard.user_male {
+  background-position-x: -8px;
+  background-position-y: -16px;
+}
+.userCard.user_female {
+  background-position-x: -50px;
+  background-position-y: -5px;
+}

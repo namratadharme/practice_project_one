@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Loginpage from "./M_pages/Login";
+import Loginpage from "./pages/Login";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Registration from "./M_pages/Registration";
-import Homepage from "./M_pages/Home";
-import Header from "./component/header";
+import Registration from "./pages/Registration";
+import Homepage from "./pages/Home";
+import Header from "./component/Header";
 import ProtectedRouter from "./ProtectedRouter";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

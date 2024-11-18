@@ -1,18 +1,20 @@
 import React from "react";
 import "../Style/header.css";
-import UserCard from "./UserCard";
+import Usercard from "./Usercard";
 
-const Header = (props) => {
+function Header(props) {
   return (
-    <div className="header-container">
-      <div className="logo"></div>
-      <div className="nav-bar"></div>
-      <div className="search-bar"></div>
-      <div className="user-card-container">
-        {props.user ? <UserCard user={props.user} /> : <></>}
+    <>
+      <div id="headerContainer">
+        <div className="logo">logo</div>
+        <div className="nav-bar">nav-bar</div>
+        <div className="search-bar">serach-bar</div>
+        <div className="userCardContainer">
+          {props.user ? <Usercard user={props.user} /> : <></>}
+        </div>
       </div>
-    </div>
+    </>
   );
-};
+}
 
 export default Header;
