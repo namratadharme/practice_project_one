@@ -4,7 +4,6 @@ import UserCard from "./UserCard";
 
 function Header(props) {
   return (
-    <>
       <div id="headerContainer">
         <div className="logo"></div>
         <div className="nav-bar"></div>
@@ -13,7 +12,6 @@ function Header(props) {
           {props.user ? <UserCard user={props.user} /> : <></>}
         </div>
       </div>
-    </>
   );
 }
 
