@@ -4,7 +4,7 @@ import Loginpage from './Pages/Login';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Registration from './Pages/Registration';
 import Homepage from './Pages/Home';
-import Header from './Component/Header';
+import Header from './Components/Header';
 import ProtectedRouter from './ProtectedRouter';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { fetchData } from "../Services/User.services";
-import Header from "../Component/Header";
+import Header from "../Components/Header";
 
 function Homepage() {
   const navigate = useNavigate();
