@@ -3,10 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { fetchData } from "../Services/User.services";
 import Header from "../Components/Header";
+import "../Style/home.css";
 
 function Homepage() {
   const navigate = useNavigate();
-  const [user, setUser] = useState();
+  const [user, setUser] = useState("");
 
   function handleLogout() {
     localStorage.removeItem("token");
@@ -28,33 +29,9 @@ function Homepage() {
   }, [user]);
   return (
     <>
-      {/* <h1
-        style={{
-          backgroundColor: "blue",
-          textAlign: "center",
-          margin: 0,
-          color: "white",
-        }}
-      >
-        Welcome to Homepage
-      </h1> */}
-      {/* <p style={{ textAlign: "center", fontSize: "20px" }}>
-        you have already logged in
-      </p> */}
       <Header user={user} />
       <br></br>
-      <button
-        onClick={handleLogout}
-        style={{
-          backgroundColor: "lightblue",
-          color: "white",
-          borderRadius: "5px",
-          padding: "9px 22px",
-          margin: "300px",
-          cursor: "pointer",
-          border: "none",
-        }}
-      >
+      <button className="logout-btn" onClick={handleLogout}>
         Log out
       </button>
     </>

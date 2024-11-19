@@ -1,4 +1,4 @@
-.userCard {
+.user_card {
   display: flex;
   height: 50px;
   width: 50px;
@@ -8,14 +8,24 @@
   background-size: 100px;
   background-repeat: no-repeat;
 
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
 }
-.userCard.user_male {
-  background-position-x: -8px;
-  background-position-y: -16px;
-}
-.userCard.user_female {
-  background-position-x: -50px;
+.user_card.user_male {
+  background-position-x: -2px;
   background-position-y: -5px;
+}
+.user_card.user_female {
+  background-position-x: -49px;
+  background-position-y: -4px;
+}
+
+.user_informationcard {
+  position: fixed;
+  width: 270px;
+  min-height: 150px;
+  border-radius: 10px;
+  box-shadow: 0.3px 0.3px 1px 1px black;
+  top: 80px;
+  right: 80px;
 }

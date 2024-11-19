@@ -53,8 +53,8 @@ async function fetchData() {
     axios
       .get(fetchuserDataEndpoint)
       .then((response) => {
-        console.log(response);
-        resolve(response);
+        console.log(response.data.data);
+        resolve(response.data.data);
       })
       .catch((error) => {
         console.log(error);

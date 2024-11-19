@@ -63,20 +63,18 @@ function Loginpage() {
 
   return (
     <>
-      <div id="container">
-        <label id="email">Email</label>
+      <div className="container">
+        <label className="email">Email</label>
         <input
-          type="email"
-          id="email1"
-          autoComplete="email"
+          className="input"
           onChange={handleInput1}
           placeholder="Email"
         ></input>
-        <label id="password">Password</label>
+
+        <label className="password">Password</label>
         <input
           type="password"
-          id="password1"
-          autoComplete="password"
+          className="input"
           placeholder="Password"
           onChange={handleInput2}
         ></input>

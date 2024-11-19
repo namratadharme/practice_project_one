@@ -92,9 +92,9 @@ function Registration() {
 
   return (
     <>
-      <div id="container">
-        <span className="type">Name</span>
-        <div className="nameField">
+      <div className="container">
+        <span className="userData">Name</span>
+        <div className="userNameField">
           <input
             className="input1"
             type="text"
@@ -110,29 +110,30 @@ function Registration() {
           ></input>
         </div>
 
-        <span className="type">Email</span>
+        <span className="userData">Email</span>
         <input
           type="text"
           className="inputField"
           placeholder="Email"
           onChange={handleInput1}
         ></input>
-        <span className="type">Password</span>
+        <span className="userData">Password</span>
         <input
           type="password"
           className="inputField"
           placeholder="Password"
           onChange={handleInput2}
         ></input>
-        <span className="type">Confirm Password</span>
+        <span className="userData">Confirm Password</span>
         <input
           type="password"
           className="inputField"
           placeholder="Confirm Password"
           onChange={handleinput3}
         ></input>
-        <span className="type">Gender</span>
+        <span className="userData">Gender</span>
         <select
+          className="selectOpn"
           id="gender"
           name="gender"
           value={gender}

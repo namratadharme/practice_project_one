@@ -1,0 +1,12 @@
+.logout-btn {
+  background-color: rgb(41, 41, 116);
+  color: white;
+  border-radius: 5px;
+  padding: 9px 22px;
+  margin-left: 800px;
+  margin-top: 200px;
+  cursor: pointer;
+  border: none;
+  width: 100px;
+  min-height: 40px;
+}
