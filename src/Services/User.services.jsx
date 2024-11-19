@@ -3,7 +3,7 @@ import {
   loginEndpoint,
   registrationEndpoint,
   fetchuserDataEndpoint,
-} from "../urlnew";
+} from "../Constants/Url";
 
 async function userLogin(email, password) {
   return new Promise((resolve, reject) => {
