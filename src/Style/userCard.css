@@ -21,11 +21,14 @@
 }
 
 .user_informationcard {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   width: 270px;
   min-height: 150px;
   border-radius: 10px;
-  box-shadow: 0.3px 0.3px 1px 1px black;
-  top: 80px;
-  right: 80px;
+  background-color: rgb(243, 239, 239);
+  box-shadow: 0.5px 0.5px 2px 2px rgb(134, 125, 125);
+  top: 90px;
+  right: 10px;
 }

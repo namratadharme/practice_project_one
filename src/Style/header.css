@@ -14,14 +14,15 @@ body {
   flex: 1;
 }
 .nav-bar {
-  flex: 4;
+  flex: 1;
 }
 .search-bar {
-  flex: 2;
+  display: flex;
+  flex: 1;
 }
 .usercard-container {
   display: flex;
-  flex: 1;
+  flex: 0.5;
   align-content: center;
   justify-content: center;
   background-color: rgb(225, 221, 230);

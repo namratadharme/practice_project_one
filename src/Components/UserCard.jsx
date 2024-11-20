@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "../Style/userCard.css";
+import UserInfo from "./UserInfo";
 
 function Usercard(props) {
   const [isUserCardShow, setIsUserCardShow] = useState(false);
-
-  const userDetail = props.user;
 
   function handleUserDetail() {
     setIsUserCardShow((isCardShow) => {
@@ -23,15 +22,7 @@ function Usercard(props) {
           props.user.gender === "male" ? "user_male" : "user_female"
         }`}
       ></div>
-      {isUserCardShow ? (
-        <div className="user_informationcard">
-          <p>
-            Name:-{userDetail.fname}
-            {userDetail.lname}
-          </p>
-          <p>Email:- {userDetail.email}</p>
-        </div>
-      ) : null}
+      {isUserCardShow ? <UserInfo user={props.user} /> : null}
     </>
   );
 }

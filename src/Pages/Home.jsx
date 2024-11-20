@@ -10,7 +10,7 @@ function Homepage() {
   const [user, setUser] = useState("");
 
   function handleLogout() {
-    localStorage.removeItem("token");
+    localStorage.removeItem("authToken");
     toast.success("Logged out succesfully !");
     navigate("/login");
   }
