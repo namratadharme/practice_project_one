@@ -1,6 +1,7 @@
 .search-bar-container {
   display: flex;
   width: 100%;
+  position: relative;
 }
 
 .search-input {
@@ -9,26 +10,25 @@
   border-radius: 30px;
   outline: none;
   border: none;
-  width: calc(100% - 120px);
+  width: calc(100% - 150px);
   padding: 9px 20px;
-  position: relative;
 }
 .search-result {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 150px;
+  justify-content: center;
   position: absolute;
+  width: calc(100% - 100px);
+  min-height: 165px;
   gap: 12px;
   top: 100px;
-  width: 410px;
   border-radius: 30px;
   box-shadow: 0.5px 0.5px 2px 2px #888;
+  background-color: white;
 }
 .search-item {
   display: flex;
-  width: 300px;
   background-color: white;
-  color: black;
   border-radius: 50%;
 }

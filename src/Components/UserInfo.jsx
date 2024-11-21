@@ -5,8 +5,7 @@ function UserInfo(props) {
     <>
       <div className="user_informationcard">
         <p>
-          Name:-{props.user.fname}
-          {props.user.lname}
+          Name:-{props.user.fname} {props.user.lname}
         </p>
         <p>Email:- {props.user.email}</p>
       </div>

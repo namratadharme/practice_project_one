@@ -24,6 +24,7 @@ function Loginpage() {
         setLoading(true);
         const reg = await userLogin(email, password);
         toast.success(reg.data.message);
+        console.log(reg);
         localStorage.setItem("authToken", reg.data.token);
         navigate("/home");
       } catch (error) {

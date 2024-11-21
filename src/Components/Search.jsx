@@ -1,39 +1,36 @@
 import React, { useState, useEffect } from "react";
 import "../Style/search.css";
+import { debounce } from "lodash";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
   const [result, setResult] = useState([]);
 
-  function handleInput(e) {
-    const Query = e.target.value;
-    setQuery(Query);
-  }
+  const debounceValue = debounce((e) => {
+    const query = e.target.value;
+    setQuery(query);
+  }, 1000);
 
   useEffect(() => {
+    console.log("api calls");
     if (query.length >= 3) {
       const tempArray = [];
-      for (let i = 0; i < 4; i++) {
+      for (let i = 1; i <= 4; i++) {
         tempArray.push({
-          id: i,
-          name: `Result for ${query}`,
-          value: `${i + 1}`,
+          name: `Result for ${query} ${i}`,
         });
       }
       setResult(tempArray);
     } else {
       setResult([]);
     }
-
-    console.log(query);
-    console.log(result);
   }, [query]);
 
   return (
     <>
       <div className="search-bar-container">
         <input
-          onChange={handleInput}
+          onChange={debounceValue}
           type="text"
           className="search-input"
           placeholder="search"
@@ -41,10 +38,8 @@ function SearchBar() {
 
         {result.length > 0 ? (
           <div className="search-result">
-            {result.map((item) => (
-              <div key={item.id} className="search-item">
-                {item.name} {item.value}
-              </div>
+            {result.map((item, index) => (
+              <div className="search-item">{item.name}</div>
             ))}
           </div>
         ) : (

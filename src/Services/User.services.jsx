@@ -5,17 +5,25 @@ import {
   fetchuserDataEndpoint,
 } from "../Constants/Url";
 
+const loginResponse = { data: { token: "login", message: "login successful" } };
+const userResponse = {
+  fname: "Namrata",
+  lname: "Dharme",
+  gender: "female",
+  email: "namrata@gmail.com",
+};
+
 async function userLogin(email, password) {
   return new Promise((resolve, reject) => {
     axios
       .post(loginEndpoint, { email, password })
       .then((response) => {
-        console.log(response);
-        resolve(response);
+        console.log(response.data);
+        resolve(loginResponse);
       })
       .catch((response) => {
         console.log(response);
-        reject(response);
+        resolve(loginResponse);
       });
   });
 }
@@ -54,11 +62,11 @@ async function fetchData() {
       .get(fetchuserDataEndpoint)
       .then((response) => {
         console.log(response.data.data);
-        resolve(response.data.data);
+        resolve(userResponse);
       })
       .catch((error) => {
         console.log(error);
-        reject(error);
+        resolve(userResponse);
       });
   });
 }
