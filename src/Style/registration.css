@@ -1,76 +1,60 @@
 .container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   border: 1px solid rgb(49, 21, 151);
-  gap: 12px;
-  margin: 5% 35%;
-  padding: 45px;
+  justify-content: center;
   border-radius: 7px;
+  margin: 2% 35%;
   background-color: #fafafa;
   box-shadow: 0.5px 0.5px 1px 1px rgb(122, 169, 212);
 }
 
 .userData {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
-  align-self: flex-start;
-  margin-left: 32px;
+  font-size: 16px;
 }
 .selectOpn {
-  margin-left: 32px;
-  width: 352px;
   min-height: 32px;
-  border-radius: 7px;
+  border-radius: 5px;
   border: none;
+  outline: none;
 }
 .input1 {
-  align-self: center;
-  opacity: 50%;
-  padding: 7px;
+  width: 100%;
   border-radius: 7px;
-  width: 158px;
+  padding: 5px;
+  border: none;
+  outline: none;
 }
 .inputField {
   width: 100%;
-  align-self: center;
-  opacity: 50%;
-  padding: 7px;
   border-radius: 7px;
-  width: 80%;
+  padding: 5px;
+  border: none;
 }
 .para {
   color: red;
-  align-self: center;
 }
 .userNameField {
   display: flex;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
-  width: 50%;
-  gap: 8px;
-  flex-direction: row;
-  margin-left: 30px;
+  font-size: 15px;
 }
 
 .button:enabled {
-  border-radius: 7px;
-  padding: 6px;
+  border-radius: 6px;
   background-color: rgb(43, 43, 110);
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
-  width: 85%;
-  margin-left: 32px;
+  font-size: 15px;
   cursor: pointer;
+  border: none;
 }
 .button:disabled {
-  border-radius: 7px;
-  padding: 6px;
+  border-radius: 6px;
   background-color: rgb(199, 222, 245);
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
-  width: 85%;
-  margin-left: 32px;
+  font-size: 15px;
+  border: none;
 }

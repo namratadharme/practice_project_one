@@ -94,21 +94,21 @@ function Registration() {
     <>
       <div className="container">
         <span className="userData">Name</span>
-        <div className="userNameField">
-          <input
-            className="input1"
-            type="text"
-            placeholder="FirstName"
-            onChange={handleFirstName}
-          ></input>
+        {/* <div className="userNameField"> */}
+        <input
+          className="input1"
+          type="text"
+          placeholder="FirstName"
+          onChange={handleFirstName}
+        ></input>
 
-          <input
-            className="input1"
-            type="text"
-            placeholder="LastName"
-            onChange={handleLastName}
-          ></input>
-        </div>
+        <input
+          className="input1"
+          type="text"
+          placeholder="LastName"
+          onChange={handleLastName}
+        ></input>
+        {/* </div> */}
 
         <span className="userData">Email</span>
         <input

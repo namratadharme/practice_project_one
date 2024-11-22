@@ -26,10 +26,10 @@
   align-items: center;
   position: fixed;
   padding: 20px 15px;
-  min-height: 130px;
+  min-height: 120px;
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0.5px 0.5px 2px 2px rgb(134, 125, 125);
-  top: 95px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  top: 100px;
   right: 10px;
 }

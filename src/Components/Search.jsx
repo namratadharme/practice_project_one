@@ -17,6 +17,7 @@ function SearchBar() {
       const tempArray = [];
       for (let i = 1; i <= 4; i++) {
         tempArray.push({
+          thumbnail: "https://placehold.co/50",
           name: `Result for ${query} ${i}`,
         });
       }
@@ -39,7 +40,10 @@ function SearchBar() {
         {result.length > 0 ? (
           <div className="search-result">
             {result.map((item, index) => (
-              <div className="search-item">{item.name}</div>
+              <div className="search-item">
+                <img src={item.thumbnail} alt={item.name}></img>
+                {item.name}
+              </div>
             ))}
           </div>
         ) : (

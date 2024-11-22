@@ -1,4 +1,8 @@
 .logout-btn {
+  display: flex;
+  position: relative;
+  top: 350px;
+  margin-left: 45%;
   background-color: blue;
   color: white;
   border-radius: 5px;

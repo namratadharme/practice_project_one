@@ -4,31 +4,31 @@
   flex-direction: column;
   border: 1px solid rgb(49, 21, 151);
   gap: 12px;
-  margin: 10% 35%;
-  padding: 45px;
+  margin: 5% 35%;
+  padding: 35px 55px;
   border-radius: 7px;
   background-color: #fafafa;
   box-shadow: 0.5px 0.5px 1px 1px rgb(122, 169, 212);
 }
 .email {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   align-self: flex-start;
-  margin-left: 32px;
 }
 
 .password {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
+  font-size: 16px;
   align-self: flex-start;
-  margin-left: 32px;
+  border: none;
+  outline: none;
 }
 .input {
-  width: 80%;
-  align-self: center;
   border-radius: 7px;
   padding: 7px;
   opacity: 50%;
+  border: none;
+  outline: none;
 }
 
 .para {
@@ -41,9 +41,8 @@
   background-color: rgb(43, 43, 110);
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
-  width: 85%;
-  margin-left: 32px;
+  font-size: 16px;
+  border: none;
 }
 .button:disabled {
   border-radius: 7px;
@@ -51,7 +50,6 @@
   background-color: rgb(122, 169, 212);
   color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 19px;
-  width: 85%;
-  margin-left: 32px;
+  font-size: 16px;
+  border: none;
 }
