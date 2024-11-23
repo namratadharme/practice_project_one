@@ -3,6 +3,7 @@ import "../Style/login.css";
 import { userLogin } from "../Services/User.services";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import ControlledInput from "../Components/ControlledInput";
 
 function Loginpage() {
   const [email, setEmail] = useState("namm@gmail.com");
@@ -84,6 +85,7 @@ function Loginpage() {
           {loading ? "Loading..." : "Log in"}
         </button>
       </div>
+      <ControlledInput />
     </>
   );
 }

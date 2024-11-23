@@ -1,25 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import Loginpage from './Pages/Login';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Registration from './Pages/Registration';
-import Homepage from './Pages/Home';
-import Header from './Components/Header';
-import ProtectedRouter from './ProtectedRouter';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Loginpage from "./Pages/Login";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Registration from "./Pages/Registration";
+import Homepage from "./Pages/Home";
+
+import ProtectedRouter from "./ProtectedRouter";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const router = createBrowserRouter([
   {
-    path: '/login',
+    path: "/login",
     element: <Loginpage />,
   },
   {
-    path: '/',
+    path: "/",
     element: <Loginpage />,
   },
+
   {
-    path: '/home',
+    path: "/home",
     element: (
       <ProtectedRouter>
         <Homepage />
@@ -27,16 +28,12 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: '/registration',
+    path: "/registration",
     element: <Registration />,
-  },
-  {
-    path: '/header',
-    element: <Header />,
   },
 ]);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ToastContainer />
